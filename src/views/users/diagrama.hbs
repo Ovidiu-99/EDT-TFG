@@ -356,15 +356,22 @@
                 <div id="myInspector">
                 </div>
             </div>
-            <button id="SaveButton" type="submit" onclick="save()">Guardar</button>
-            <button onclick="load()">Cargar</button> Modelo guardado en formato JSON:
-            <form action="/users/diagrama/{{user._id}}?_method=PUT" method="POST">
-                <textarea id="mySavedModel" class="form-control" name="diagrama"
-                    style="width:100%; height:270px;margin-bottom:10%">
+            <div class="qa">
+                <input type="checkbox" id="qa0" />
+                <label for="qa0">Diagrama en formato JSON</label>
+                <div>
+                    <button id="SaveButton" type="submit" onclick="save()">Guardar</button>
+                    <button onclick="load()">Cargar</button>
+                    <form action="/users/diagrama/{{user._id}}?_method=PUT" method="POST">
+                        <textarea id="mySavedModel" class="form-control" name="diagrama"
+                            style="width:100%; height:270px;margin-bottom:10%">
                         {{user.diagrama}}
 
                     </textarea>
-                <input type="submit" style="margin-bottom: 5%;" value="Guardar Diagrama">
+                    </form>
+                </div>
+            </div>
+            <input type="submit" style="margin-bottom: 5%;" value="Guardar Diagrama">
         </div>
 
     </div>
