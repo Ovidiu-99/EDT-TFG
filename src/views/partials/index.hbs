@@ -1,0 +1,26 @@
+{{#if user}}
+<div class="jumbotron" style="margin-top:10%; background-color:white">
+    <h1> Hola {{user.name}}!</h1>
+    Para crear y/o modificar tu EDT haz click en el siguiente botón:
+    <a role="button" class="btn btn-primary" href="../users/diagrama">Acceso
+        al diagrama</a>
+</div>
+
+
+{{else}}
+<div class="jumbotron mt-4">
+    <h1 class="display-4">Bienvenido/a!</h1>
+    <p class="lead">Una EDT sirve como base de la comunicación de información, puedes usarla como base para calcular el
+        presupuesto, progresar y describir otros aspectos del proyecto que permite a todo el personal y grupos
+        relacionados con el proyecto. De este modo, se puede comprender el trabajo requerido para completar el proyecto.
+        <br>
+        Para empezar a crear una EDT, debes iniciar sesión. Si no tienes una cuenta, creala haciendo click en el botón
+        Registrarse.
+    </p>
+    <hr class="my-4">
+    <a role="button" style="margin-left: 350px;" class="btn btn-primary" type="submit" href="../users/signin">Iniciar
+        Sesión</a>
+    <a role="button" style="margin-left: 55px;" class="btn btn-primary" type="submit"
+        href="../users/signup">Registrarse</a>
+</div>
+{{/if}}
